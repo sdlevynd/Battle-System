@@ -18,10 +18,11 @@ namespace Battle_System
 
             Enemy enemy = new Skeleton();
 
-            while (true)
-            {
-                
-            }
+            Console.WriteLine("Press enter to start battle...");
+            Console.ReadLine();
+
+            Battle thisBattle = new Battle(player, enemy);
+            thisBattle.Loop();
         }
 
         static Player PlayerSetup()

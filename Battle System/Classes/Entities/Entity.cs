@@ -15,6 +15,7 @@ namespace Battle_System.Classes.Entities
         protected string name;
 
         protected int strength;
+        protected float accuracy;
 
         private Inventory inventory;
         protected Weapon weapon = new Weapon("No weapon", "you do not have a weapon", 1);
@@ -26,6 +27,7 @@ namespace Battle_System.Classes.Entities
             mp = 10;
             strength = 1;
             rng = new Random();
+            accuracy = 0.8f;
         }
         public string GetName()
         {
@@ -33,18 +35,23 @@ namespace Battle_System.Classes.Entities
         }
         public int Attack()
         {
-            if (rng.Next(10) < 8)
+            if (rng.NextDouble() < accuracy)
             {
                 return strength * weapon.getAttack();
             }
             else
             {
+                Console.WriteLine($"{name} missed!");
                 return 0;
             }
         }
         public void Damage(int damage)
         {
             hp -= damage;
+            if (hp < 0)
+            {
+                hp = 0;
+            }
         }
         public int GetHp()
         {

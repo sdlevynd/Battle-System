@@ -1,5 +1,15 @@
 Features to be added:
 
-1. Add two new classes
-	a. each class should have a different weapon + different stats
-2. 
+1. Add two new player sub-classes to the Player.cs file
+	a. each class should have a different weapon 
+	b. each class should have different stats
+2. Add two new enemy sub-classes to the Enemy.cs file
+	a. each class should have a different weapon 
+	b. each class should have different stats
+3. Fix the battle system
+	a. battle loop should end when player or enemy has 0hp
+	b. message should display who won
+4. Interactivity
+	a. add options instead of automatically attacking
+	b. different classes could have different options
+	c. player should choose option with input, enemy should randomly pick option
