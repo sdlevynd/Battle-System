@@ -17,12 +17,10 @@ namespace Battle_System.Classes.Entities
             GiveItem(new Item("map", "a map"));
             ClassName = "None";
         }
-
         internal void GiveItem(Item item)
         {
             
         }
-
         public string GetClassName()
         {
             return ClassName;

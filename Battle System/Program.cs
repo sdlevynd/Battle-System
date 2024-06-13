@@ -9,7 +9,6 @@ namespace Battle_System
         static Player player;
         static void Main(string[] args)
         {
-            //a comment
             Player player = PlayerSetup();
 
             Console.WriteLine($"Welcome, {player.GetName()}!");
