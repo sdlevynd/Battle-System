@@ -13,4 +13,11 @@ namespace Battle_System.Classes.Entities
 
         }
     }
+    internal class Skeleton : Enemy
+    {
+        public Skeleton() : base("Skeleton")
+        {
+
+        }
+    }
 }

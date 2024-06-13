@@ -6,12 +6,14 @@ namespace Battle_System
 {
     internal class Program
     {
+        static Player player;
         static void Main(string[] args)
         {
 
             Player player = PlayerSetup();
 
             Console.WriteLine($"Welcome, {player.GetName()}!");
+            Console.WriteLine($"You are a {player.GetClassName()}");
             Console.WriteLine($"You have a {player.GetWeaponName()}, it is {player.GetWeaponDescription()}");
 
             Enemy enemy = new Skeleton();
@@ -26,13 +28,17 @@ namespace Battle_System
         {
             string playerName = PresenceCheck("Enter your name");
 
-            string playerClassChoice = PresenceCheck("Select your class from the list below:\n" +
-                "1: ...\n" +
-                "2: ...\n" +
-                "3: ...");
-            Console.WriteLine("Class selection has not been implemented yet");
+            string playerClassChoice = OptionCheck("Select your class from the list below:\n" +
+                "1: Fighter\n" +
+                "2: Not Implemented\n" +
+                "3: Not Implemented", 
+                new string[] { "1" });
 
-            Player player = new Player(playerName);
+            if (playerClassChoice == "1")
+            {
+                player = new Fighter(playerName);
+            }
+
             return player;
         }
 
@@ -43,6 +49,15 @@ namespace Battle_System
             {
                 Console.WriteLine(message);
                 userInput = Console.ReadLine();
+            }
+            return userInput;
+        }
+        static string OptionCheck(string message, string[] options)
+        {
+            string userInput = "";
+            while (!options.Contains(userInput))
+            {
+                userInput = PresenceCheck(message);
             }
             return userInput;
         }

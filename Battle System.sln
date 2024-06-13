@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Battle System", "Battle Sys
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unit Testing", "Unit Testing\Unit Testing.csproj", "{DD6696D3-F426-4A0A-B492-A32FDC3356C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Notes", "Notes", "{11486B20-C164-472C-8510-39CF52D4412B}"
+	ProjectSection(SolutionItems) = preProject
+		To Do List.txt = To Do List.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

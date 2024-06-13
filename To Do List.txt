@@ -1,0 +1,5 @@
+Features to be added:
+
+1. Add two new classes
+	a. each class should have a different weapon + different stats
+2. 
