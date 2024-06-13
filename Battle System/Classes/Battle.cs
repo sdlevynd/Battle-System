@@ -30,8 +30,15 @@ namespace Battle_System.Classes
                     $"with your {player.GetWeaponName()} " +
                     $"and deal {PlayerAttack} damage");
                 Console.WriteLine($"{enemy.GetName()} has {enemy.GetHp()} health");
-
                 Console.ReadLine();
+
+                if (enemy.GetHp() == 0)
+                {
+                    Console.WriteLine("you won!");
+                    over = true;
+                    continue;
+                }
+
 
                 int enemyAttack = enemy.Attack();
                 player.Damage(enemyAttack);

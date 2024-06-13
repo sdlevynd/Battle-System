@@ -35,4 +35,27 @@ namespace Battle_System.Classes.Entities
             EquipItem(new Weapon("sword", "a basic sword", 1));
         }
     }
+    public class Archer : Player
+    {
+        public Archer(string name) : base(name)
+        {
+            strength = 5;
+            ClassName = "Archer";
+            EquipItem(new Weapon("bow", "a basic bow", 1));
+        }
+        public override int Attack()
+        {
+            //choose a type of attack to do
+            if (mp > 5)
+            {
+                mp -= 2;
+                return 10;
+            }
+            else
+            {
+                Console.WriteLine("you don't have enough mp!");
+                return base.Attack();
+            }
+        }
+    }
 }
